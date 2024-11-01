@@ -11,7 +11,7 @@ class Command(BaseCommand):
 
         # Criar usuários
         usuarios = []
-        for _ in range(10):
+        for _ in range(200):  # Ajuste para 200 usuários
             usuario = Usuario.objects.create(
                 nome=fake.name(),
                 email=fake.unique.email(),
@@ -35,7 +35,7 @@ class Command(BaseCommand):
         # Criar produtos para cada vendedor
         produtos = []
         for vendedor in vendedores:
-            for _ in range(5):
+            for _ in range(10):  # Ajuste para 10 produtos por vendedor
                 produto = Produto.objects.create(
                     vendedor=vendedor,
                     nome=fake.word().capitalize(),
@@ -47,7 +47,7 @@ class Command(BaseCommand):
 
         # Criar pedidos entre compradores e vendedores
         pedidos = []
-        for _ in range(20):
+        for _ in range(500):  # Ajuste para 500 pedidos
             comprador = random.choice([u for u in usuarios if not u.is_vendedor])
             vendedor = random.choice(vendedores)
             produto = random.choice(produtos)
@@ -61,7 +61,7 @@ class Command(BaseCommand):
             pedidos.append(pedido)
         
         # Criar avaliações para produtos
-        for _ in range(30):
+        for _ in range(1000):  # Ajuste para 1000 avaliações
             avaliador = random.choice([u for u in usuarios if not u.is_vendedor])
             produto = random.choice(produtos)
             Avaliacao.objects.create(
@@ -72,7 +72,7 @@ class Command(BaseCommand):
             )
 
         # Criar chats entre compradores e vendedores
-        for _ in range(50):
+        for _ in range(2000):  # Ajuste para 2000 mensagens de chat
             vendedor = random.choice(vendedores)
             comprador = random.choice([u for u in usuarios if not u.is_vendedor])
             Chat.objects.create(
@@ -84,7 +84,7 @@ class Command(BaseCommand):
 
         # Criar notificações para usuários
         for usuario in usuarios:
-            for _ in range(3):
+            for _ in range(10):  # Ajuste para 10 notificações por usuário
                 Notificacao.objects.create(
                     usuario=usuario,
                     mensagem=fake.sentence(),
@@ -93,10 +93,11 @@ class Command(BaseCommand):
 
         # Criar pagamentos para produtos
         for produto in produtos:
-            Pagamento.objects.create(
-                produto=produto,
-                tipo_pagamento=random.choice(['cartao', 'boleto']),
-                pago_em=fake.date_time_this_year()
-            )
+            for _ in range(2):  # Ajuste para 2 pagamentos por produto
+                Pagamento.objects.create(
+                    produto=produto,
+                    tipo_pagamento=random.choice(['cartao', 'boleto']),
+                    pago_em=fake.date_time_this_year()
+                )
 
-        self.stdout.write(self.style.SUCCESS('Banco de dados populado com sucesso!'))
+        self.stdout.write(self.style.SUCCESS('Banco de dados populado com centenas de registros!'))
