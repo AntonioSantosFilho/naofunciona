@@ -56,7 +56,7 @@ class Avaliacao(models.Model):
     data_avaliacao = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f"Avaliação por {self.avaliador.nome} para o produto {self.produto.nome} do vendedor {self.produto.vendedor.usuarioNome}"
+        return f"Avaliação por {self.avaliador.nome} para o produto {self. produto.nome} do vendedor {self.produto.vendedor.usuario}"
 
 # Modelo para gerenciar as mensagens trocadas entre vendedores e compradores
 class Chat(models.Model):
