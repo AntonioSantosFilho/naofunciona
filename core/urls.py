@@ -10,6 +10,6 @@ from apps.enquetes import views  # add this
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),                # Django admin route
-     path("test-login/", views.test_template, name="test_login"),
+    
 
 ]
