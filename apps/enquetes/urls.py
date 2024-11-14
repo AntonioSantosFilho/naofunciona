@@ -8,5 +8,5 @@ app_name = 'enquetes'
 
 
 urlpatterns = [
-
+ path("test-login/", views.test_template, name="test_login"),
 ]
