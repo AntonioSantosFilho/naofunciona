@@ -6,11 +6,11 @@ Append to /etc/hosts file:
 
 ```
 # BEGIN projetosd
-127.0.0.1   distribulanche.com.br
-127.0.0.1   www.distribulanche.com.br
-127.0.0.1   api.distribulanche.com.br
-127.0.0.1   adm.distribulanche.com.br
-127.0.0.1   status.distribulanche.com.br
+127.0.0.1   sfmm1.online
+127.0.0.1   www.sfmm1.online
+127.0.0.1   api.sfmm1.online
+127.0.0.1   adm.sfmm1.online
+127.0.0.1   status.sfmm1.online
 # END projetosd
 ```
 

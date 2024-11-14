@@ -19,8 +19,8 @@ SECRET_KEY = "hLwoS-HbZx4eNUTqrM3osPFdHQamfLcYo38iugUCX4d"
 DEBUG = 0
 
 # load production server from .env
-ALLOWED_HOSTS        = ['www.distribulanche.com.br', 'distribulanche.com.br']
-CSRF_TRUSTED_ORIGINS = ['www.distribulanche.com.br', 'distribulanche.com.br']
+ALLOWED_HOSTS        = ['www.sfmm1.online', 'sfmm1.online']
+CSRF_TRUSTED_ORIGINS = ['www.sfmm1.online', 'sfmm1.online']
 
 ACCOUNT_DEFAULT_HTTP_PROTOCOL='https'
 
