@@ -4,9 +4,9 @@ from django.urls import path
 
 from . import views
 
-app_name = 'enquetes'
+app_name = 'registro'
 
 
 urlpatterns = [
- path("test-login/", views.test_template, name="test_login"),
+ 
 ]
