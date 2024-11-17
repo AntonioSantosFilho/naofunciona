@@ -16,7 +16,7 @@ SECRET_KEY = "hLwoS-HbZx4eNUTqrM3osPFdHQamfLcYo38iugUCX4d"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = os.getenv("DEBUG", 'False').lower() in ('1', 'true', 't', 'yes', 'y')
-DEBUG = 1
+DEBUG = True
 
 # load production server from .env
 ALLOWED_HOSTS        = ['www.sfmm1.online', 'sfmm1.online']
