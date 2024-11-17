@@ -9,7 +9,7 @@ from django.urls import path, include
 from apps.registro import views  # add this
 
 urlpatterns = [
-    path('admin/', admin.site.urls, name='admin'),                # Django admin route
-    path("test-login/", views.test_template, name="test_login"),
+    path('admin/', admin.site.urls, name='admin'),
+    path('accounts', include('allauth.urls')),
 
 ]
