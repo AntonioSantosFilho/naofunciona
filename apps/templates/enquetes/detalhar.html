@@ -5,7 +5,7 @@
 <body>
 	<h1>{{ pergunta.texto_da_pergunta }}</h1>
 	{% if erro %}<p><strong>{{ erro }}</strong></p>{% endif %}
-	<form action="{% url 'enquetes:votar' pergunta.id %}" method="post">
+	<form action="{% url 'registro:votar' pergunta.id %}" method="post">
 	{% csrf_token %}	
 	{% for resposta in pergunta.resposta_set.all %}
 	    <input type="radio" name="escolha" id="escolha{{ forloop.counter }}" value="{{ resposta.id }}">
