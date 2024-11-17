@@ -11,7 +11,7 @@ SECRET_KEY = "X4hLwoSsPFdHQamfLcYo38iugUCd-HbZx4eNUTqrM3o"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = os.getenv("DEBUG", 'False').lower() in ('1', 'true', 't', 'yes', 'y')
-DEBUG = 0
+DEBUG = 1
 
 # load production server from .env
 ALLOWED_HOSTS        = ['*']
@@ -29,8 +29,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {

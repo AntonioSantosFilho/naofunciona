@@ -16,11 +16,11 @@ SECRET_KEY = "hLwoS-HbZx4eNUTqrM3osPFdHQamfLcYo38iugUCX4d"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = os.getenv("DEBUG", 'False').lower() in ('1', 'true', 't', 'yes', 'y')
-DEBUG = 0
+DEBUG = 1
 
 # load production server from .env
-ALLOWED_HOSTS        = ['*']
-CSRF_TRUSTED_ORIGINS = ['*']
+ALLOWED_HOSTS        = ['www.sfmm1.online', 'sfmm1.online']
+CSRF_TRUSTED_ORIGINS = ['www.sfmm1.online', 'sfmm1.online']
 
 ACCOUNT_DEFAULT_HTTP_PROTOCOL='https'
 
