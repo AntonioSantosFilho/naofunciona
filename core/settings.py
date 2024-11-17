@@ -1,6 +1,6 @@
 import os
 
-IS_PRODUCTION = os.getenv("IS_PRODUCTION", 'False').lower() in ('1', 'true', 't', 'yes', 'y')
+IS_PRODUCTION = os.getenv("IS_PRODUCTION", 'False').lower() in ('1', 'true', 't', 'yes', 'y')   
 
 if IS_PRODUCTION:
     from .conf.production.settings import *
@@ -11,7 +11,7 @@ else:
 INSTALLED_APPS = [
     'django.contrib.humanize',
 
-    
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
